@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>For contributors &mdash; Odoo buildout recipe 1.9.2.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/united.anybox.bootswatch.bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/anybox.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.9.2.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Odoo buildout recipe 1.9.2.dev0 documentation" href="index.html" />
+    <link rel="next" title="Development notes" href="devnotes/index.html" />
+    <link rel="prev" title="Full development to production example" href="dev_prod_workflow.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/logo.png">
+          Odoo buildout recipe</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.9</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://anybox.fr">Anybox</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="first_steps.html">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#how-to-create-and-bootstrap-a-buildout">How to create and bootstrap a buildout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#example-openerp-7-0-buildouts">Example OpenERP 7.0 buildouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#example-openerp-6-1-buildout-with-a-custom-addon">Example OpenERP 6.1 buildout with a custom addon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#example-openerp-6-0-buildout-server-and-clients">Example OpenERP 6.0 buildout (server and clients)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#continuously-tested-examples">Continuously tested examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#other-sample-buildouts">Other sample buildouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#the-buildout-configuration-file-and-parts">The buildout configuration file and parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#odoo-recipes">Odoo recipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-assembly-and-source-management">Options for assembly and source management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#odoo-options">Odoo options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-executables-generation-and-serving">Options for executables generation and serving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-development-qa-and-introspection">Options for development, QA and introspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-download-and-caching-strategies">Options for download and caching strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-release-and-packaging">Options for release and packaging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scripts.html">Odoo Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#use-cases">Use cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#declaring-odoo-scripts">Declaring Odoo Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#interactive-consoles">Interactive Consoles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#writing-odoo-scripts">Writing Odoo Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#upgrade-scripts">Upgrade scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#startup-scripts">Startup scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#list-of-internal-entry-points">List of internal entry points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev_prod_workflow.html">Full development to production example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev_prod_workflow.html#common-setup">Common setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_prod_workflow.html#developer-s-setup">Developer&#8217;s setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_prod_workflow.html#release-and-packaging">Release and packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_prod_workflow.html#deployment-with-a-server-local-configuration-file">Deployment with a server-local configuration file</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">For contributors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#source-and-tracking">Source and tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-a-development-version">Using a development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-setup">Development setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-documentation">Building documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-style">Coding style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-static-analysis-and-unit-tests">Launching static analysis and unit tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integration-tests">Integration tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#continuous-integration">Continuous integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="devnotes/index.html">Development notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="devnotes/git-sparse-shallow.html">Git shallow clones and selective branch fetching</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html">anybox.recipe.odoo Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#id1"><code class="docutils literal"><span class="pre">anybox.recipe.odoo</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.base"><code class="docutils literal"><span class="pre">base</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.devtools"><code class="docutils literal"><span class="pre">devtools</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.server"><code class="docutils literal"><span class="pre">server</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.testing"><code class="docutils literal"><span class="pre">testing</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.utils"><code class="docutils literal"><span class="pre">utils</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#subpackages">Subpackages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html">runtime Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime"><code class="docutils literal"><span class="pre">runtime</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.session"><code class="docutils literal"><span class="pre">session</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.upgrade"><code class="docutils literal"><span class="pre">upgrade</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.start_openerp"><code class="docutils literal"><span class="pre">start_openerp</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.test_openerp"><code class="docutils literal"><span class="pre">test_openerp</span></code> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html">vcs Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs"><code class="docutils literal"><span class="pre">vcs</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.base"><code class="docutils literal"><span class="pre">base</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.bzr"><code class="docutils literal"><span class="pre">bzr</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.git"><code class="docutils literal"><span class="pre">git</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.hg"><code class="docutils literal"><span class="pre">hg</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.svn"><code class="docutils literal"><span class="pre">svn</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.testing"><code class="docutils literal"><span class="pre">testing</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">For contributors</a><ul>
+<li><a class="reference internal" href="#source-and-tracking">Source and tracking</a></li>
+<li><a class="reference internal" href="#using-a-development-version">Using a development version</a></li>
+<li><a class="reference internal" href="#development-setup">Development setup</a></li>
+<li><a class="reference internal" href="#building-documentation">Building documentation</a></li>
+<li><a class="reference internal" href="#coding-style">Coding style</a></li>
+<li><a class="reference internal" href="#launching-static-analysis-and-unit-tests">Launching static analysis and unit tests</a></li>
+<li><a class="reference internal" href="#integration-tests">Integration tests</a></li>
+<li><a class="reference internal" href="#continuous-integration">Continuous integration</a><ul>
+<li><a class="reference internal" href="#basic-builds">Basic builds</a></li>
+<li><a class="reference internal" href="#actual-runs">Actual runs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="dev_prod_workflow.html" title="Previous Chapter: Full development to production example"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Full developm...</span>
+    </a>
+  </li>
+  <li>
+    <a href="devnotes/index.html" title="Next Chapter: Development notes"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Development n... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/contributing.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="for-contributors">
+<h1>For contributors<a class="headerlink" href="#for-contributors" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="source-and-tracking">
+<h2>Source and tracking<a class="headerlink" href="#source-and-tracking" title="Permalink to this headline">¶</a></h2>
+<p>The recipes are currently both hosted in a <a class="reference external" href="https://github.com/anybox/anybox.recipe.odoo">single Git repository</a>, the master branch being
+<code class="docutils literal"><span class="pre">anybox.recipe.odoo</span></code>, whereas <code class="docutils literal"><span class="pre">anybox.recipe.openerp</span></code> is to be found in
+the <code class="docutils literal"><span class="pre">a.r.openerp-x.y</span></code> branches (currently only 1.9 and the legacy
+1.8). This unusual structure because they still have most in common,
+<code class="docutils literal"><span class="pre">a.r.odoo</span></code> being <code class="docutils literal"><span class="pre">a.r.openerp</span></code> without the bits for backward compatibility
+before Odoo v8.</p>
+<p>We follow the standard GitHub workflow (issues, pull requests…).
+Code contributors are systematically added to the list of
+contributors at the end of the README, unless they explicitely wish
+not to (what GitHub does is obviously out of our scope).</p>
+<p>Members of the &#8220;Anybox&#8221; organization have push privileges on this repository.</p>
+</div>
+<div class="section" id="using-a-development-version">
+<h2>Using a development version<a class="headerlink" href="#using-a-development-version" title="Permalink to this headline">¶</a></h2>
+<p>To use a local version of the recipe, you may use the <code class="docutils literal"><span class="pre">develop</span></code>
+general buildout option:</p>
+<div class="highlight-python"><div class="highlight"><pre>[buildout]
+develop = /path/to/anybox.recipe.o
+</pre></div>
+</div>
+<p>To track a Git branch, we find the
+<a class="reference external" href="https://pypi.python.org/pypi/gp.vcsdevelop">gp.vcsdevelop</a>
+extension simple and useful. Here&#8217;s an example for
+<code class="docutils literal"><span class="pre">anybox.recipe.openerp</span></code> (notice the <code class="docutils literal"><span class="pre">&#64;</span></code> notation for the branch):</p>
+<div class="highlight-python"><div class="highlight"><pre>[buildout]
+extensions = gp.vcsdevelop
+vcs-extend-develop = git+https://github.com/anybox/anybox.recipe.odoo@a.r.openerp-1.9#egg=a.r.openerp
+vcs-update = True
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">gp.vcsdevelop</span></code> leverages internally pip, and the
+<code class="docutils literal"><span class="pre">git+https</span></code> syntax actually <a class="reference external" href="https://pip.pypa.io/en/latest/reference/pip_install.html#vcs-support">comes from pip</a>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Actually some parts of the recipe are aware of the possible use
+of <code class="docutils literal"><span class="pre">gp.vcsdevelop</span></code> for python dependencies, and special care of it is
+taken in the freeze and extract features. This is known to work even
+for <code class="docutils literal"><span class="pre">zc.buildout</span></code> itself.</p>
+</div>
+</div>
+<div class="section" id="development-setup">
+<h2>Development setup<a class="headerlink" href="#development-setup" title="Permalink to this headline">¶</a></h2>
+<p>We recommend &#8220;developing&#8221; the source code in a virtualenv, together
+with <code class="docutils literal"><span class="pre">bzr</span></code>. For instance:</p>
+<div class="highlight-python"><div class="highlight"><pre>virtualenv recipe-env
+git clone https://github.com/anybox/anybox.recipe.odoo
+cd anybox.recipe.odoo
+../bin/pip install -e.[test]
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-documentation">
+<h2>Building documentation<a class="headerlink" href="#building-documentation" title="Permalink to this headline">¶</a></h2>
+<p>We are using <a class="reference external" href="https://pypi.python.org/pypi/sphinx-bootstrap-theme/">sphinx_bootstrap_theme</a> to easly get responsive
+design documentation.</p>
+<p>You will find <code class="docutils literal"><span class="pre">sphinx_static/united.anybox.bootswatch.bootstrap.min.css</span></code> file
+which use <a class="reference external" href="https://bootswatch.com">bootswatch</a> <strong>united</strong> theme using
+<code class="docutils literal"><span class="pre">sphinx_static/united.anybox.bootswatch.variables.less</span></code> variables file. To
+generate <code class="docutils literal"><span class="pre">.css</span></code> file, please follow <a class="reference external" href="https://bootswatch.com/help/">bootswatch instructions</a>.</p>
+<p><em>HowTo</em> build documentation:</p>
+<div class="highlight-python"><div class="highlight"><pre>virtualenv doc-recipe-env
+git clone https://github.com/anybox/anybox.recipe.odoo
+doc-recipe-env/bin/pip install sphinx sphinx_bootstrap_theme
+cd anybox.recipe.odoo/doc
+doc-recipe-env/bin/sphinx-build . sphinx_build/
+</pre></div>
+</div>
+</div>
+<div class="section" id="coding-style">
+<h2>Coding style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
+<p>The recipe follows the same strong code development coding principles
+as many other projects:</p>
+<ul class="simple">
+<li>Style enforcement : we follow the PEP8 guidelines</li>
+<li>Static analysis with <a class="reference external" href="https://pypi.python.org/pypi/flake8">flake8</a>
+(combines conveniently <a class="reference external" href="https://pypi.python.org/pypi/pep8">pep8</a>
+and <a class="reference external" href="https://pypi.python.org/pypi/pyflakes">pyflakes</a>).</li>
+<li>Unit tests: we try and test as much as possible. It is hard to achieve a
+real 100% with a tool that calls so many external processes, but
+this is mitigated by our
+<a class="reference internal" href="#continuous-integration"><span>continuous integration</span></a> practice of
+doing real Odoo installations with the latest revision of the recipe.</li>
+</ul>
+</div>
+<div class="section" id="launching-static-analysis-and-unit-tests">
+<h2>Launching static analysis and unit tests<a class="headerlink" href="#launching-static-analysis-and-unit-tests" title="Permalink to this headline">¶</a></h2>
+<p>Install <code class="docutils literal"><span class="pre">flake8</span></code> and, optionally, <code class="docutils literal"><span class="pre">coverage</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>recipe-env/bin/pip install coverage, flake8
+</pre></div>
+</div>
+<p>Run <code class="docutils literal"><span class="pre">flake8</span></code> and the tests (in this example, after virtualenv activation):</p>
+<div class="highlight-python"><div class="highlight"><pre>cd anybox.recipe.odoo
+../bin/pip/python setup.py flake8 &amp;&amp; ../bin/pip/python setup.py nosetests
+</pre></div>
+</div>
+<p>There is also this convenience to run the tests and output a coverage report:</p>
+<div class="highlight-python"><div class="highlight"><pre>source ./test-cover
+</pre></div>
+</div>
+</div>
+<div class="section" id="integration-tests">
+<span id="id1"></span><h2>Integration tests<a class="headerlink" href="#integration-tests" title="Permalink to this headline">¶</a></h2>
+<p>There is a special category of tests: those that need a real Odoo
+instance, built with the recipe, to run.</p>
+<p>They are located within the <code class="docutils literal"><span class="pre">tests_with_openerp</span></code> subdirectory and
+need to be launched with a launcher script constructed by the recipe.</p>
+<p>For example, create a testing buildout like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>[buildout]
+parts = odoo
+[odoo]
+# version as you wish
+version = nightly 8.0 latest
+eggs = nose
+openerp_scripts = nosetests command-line-options=-d
+</pre></div>
+</div>
+<p>Then run <code class="docutils literal"><span class="pre">bin/buildout</span></code>, create a database and initialize it. From
+the buildout directory:</p>
+<div class="highlight-python"><div class="highlight"><pre>createdb test-recipe
+bin/start_odoo -d test-recipe -i base --stop-after-init
+</pre></div>
+</div>
+<p>You can then run the tests:</p>
+<div class="highlight-python"><div class="highlight"><pre>bin/nosetests_odoo -d test-recipe -- /path/to/recipe/branch/tests_with_openerp
+</pre></div>
+</div>
+<p>Currently, these tests are all about the <code class="docutils literal"><span class="pre">Session</span></code> objects, used in
+scripts.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>you may use a different version of the recipe to build that
+testing buildout. This is anyway what happens if you build
+with your development version, and hack some changes
+afterwards.</p>
+<p class="last">Using a very different version of the recipe could give
+funky results, but you&#8217;re supposed to know what you&#8217;re doing
+at this point.</p>
+</div>
+</div>
+<div class="section" id="continuous-integration">
+<span id="id2"></span><h2>Continuous integration<a class="headerlink" href="#continuous-integration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-builds">
+<h3>Basic builds<a class="headerlink" href="#basic-builds" title="Permalink to this headline">¶</a></h3>
+<p>Upon each push on the main branches, Anybox&#8217; public
+buildbot awakes to check the coding style, run the tests and build
+this documentation. You may check the status there:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://buildbot.anybox.fr/waterfall?show=anybox.recipe.odoo">anybox.recipe.odoo builder</a></li>
+<li><a class="reference external" href="http://buildbot.anybox.fr/waterfall?show=anybox.recipe.openerp">anybox.recipe.openerp builder</a></li>
+</ul>
+</div>
+<div class="section" id="actual-runs">
+<h3>Actual runs<a class="headerlink" href="#actual-runs" title="Permalink to this headline">¶</a></h3>
+<p>Furthermore, this buildbot instance runs <a class="reference external" href="https://pypi.python.org/pypi/anybox.buildbot.openerp">anybox.buildbot.openerp</a>,
+a buildbot configurator for Odoo installations based on the recipe.</p>
+<p>This is used in turn to run high-level integration tests, having the
+latest bzr version of the recipe actually install several combinations
+of OpenObject server and addons, and run their unit tests.</p>
+<p>The configuration is stored in the <code class="docutils literal"><span class="pre">buildbot</span></code> subdirectory of the
+master branch. It is made of a high level configuration file
+(<code class="docutils literal"><span class="pre">MANIFEST.cfg</span></code>) and buildout configuration files. This buildbot
+instance actually aggregates several such configurations.</p>
+<p>The corresponding builders are those whose name starts with
+<code class="docutils literal"><span class="pre">recipe-</span></code> in the <a class="reference external" href="http://buildbot.anybox.fr/builders">builders list</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">the <a class="reference internal" href="#integration-tests">integration tests</a> mentioned above are executed in
+particular during this process, currently in the
+<code class="docutils literal"><span class="pre">recipe-7.0-postgresql-9.2</span></code> builder.</p>
+</div>
+<p>Some builds may appear to be broken because of tests failures been
+pushed by upstream in Odoo itself or in the tested addons, but it&#8217;s
+easy to check whether this is due to a recipe failure or not.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Anybox hardware resources are limited; contributing buildslaves would
+be greatly appreciated.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2011-2015, &lt;a href=&#34;http://anybox.fr/&#34;&gt;Anybox SAS&lt;/a&gt; and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

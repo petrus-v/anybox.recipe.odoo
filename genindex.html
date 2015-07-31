@@ -1,0 +1,1353 @@
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Index &mdash; Odoo buildout recipe 1.9.2.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/united.anybox.bootswatch.bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/anybox.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.9.2.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Odoo buildout recipe 1.9.2.dev0 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/logo.png">
+          Odoo buildout recipe</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.9</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://anybox.fr">Anybox</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="first_steps.html">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#how-to-create-and-bootstrap-a-buildout">How to create and bootstrap a buildout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#example-openerp-7-0-buildouts">Example OpenERP 7.0 buildouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#example-openerp-6-1-buildout-with-a-custom-addon">Example OpenERP 6.1 buildout with a custom addon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#example-openerp-6-0-buildout-server-and-clients">Example OpenERP 6.0 buildout (server and clients)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#continuously-tested-examples">Continuously tested examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_steps.html#other-sample-buildouts">Other sample buildouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#the-buildout-configuration-file-and-parts">The buildout configuration file and parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#odoo-recipes">Odoo recipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-assembly-and-source-management">Options for assembly and source management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#odoo-options">Odoo options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-executables-generation-and-serving">Options for executables generation and serving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-development-qa-and-introspection">Options for development, QA and introspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-download-and-caching-strategies">Options for download and caching strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#options-for-release-and-packaging">Options for release and packaging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scripts.html">Odoo Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#use-cases">Use cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#declaring-odoo-scripts">Declaring Odoo Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#interactive-consoles">Interactive Consoles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#writing-odoo-scripts">Writing Odoo Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#upgrade-scripts">Upgrade scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#startup-scripts">Startup scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#list-of-internal-entry-points">List of internal entry points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev_prod_workflow.html">Full development to production example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev_prod_workflow.html#common-setup">Common setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_prod_workflow.html#developer-s-setup">Developer&#8217;s setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_prod_workflow.html#release-and-packaging">Release and packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_prod_workflow.html#deployment-with-a-server-local-configuration-file">Deployment with a server-local configuration file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">For contributors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#source-and-tracking">Source and tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#using-a-development-version">Using a development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#development-setup">Development setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#coding-style">Coding style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#launching-static-analysis-and-unit-tests">Launching static analysis and unit tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#integration-tests">Integration tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#continuous-integration">Continuous integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="devnotes/index.html">Development notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="devnotes/git-sparse-shallow.html">Git shallow clones and selective branch fetching</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html">anybox.recipe.odoo Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#id1"><code class="docutils literal"><span class="pre">anybox.recipe.odoo</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.base"><code class="docutils literal"><span class="pre">base</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.devtools"><code class="docutils literal"><span class="pre">devtools</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.server"><code class="docutils literal"><span class="pre">server</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.testing"><code class="docutils literal"><span class="pre">testing</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.utils"><code class="docutils literal"><span class="pre">utils</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.html#subpackages">Subpackages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html">runtime Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime"><code class="docutils literal"><span class="pre">runtime</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.session"><code class="docutils literal"><span class="pre">session</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.upgrade"><code class="docutils literal"><span class="pre">upgrade</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.start_openerp"><code class="docutils literal"><span class="pre">start_openerp</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.test_openerp"><code class="docutils literal"><span class="pre">test_openerp</span></code> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html">vcs Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs"><code class="docutils literal"><span class="pre">vcs</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.base"><code class="docutils literal"><span class="pre">base</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.bzr"><code class="docutils literal"><span class="pre">bzr</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.git"><code class="docutils literal"><span class="pre">git</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.hg"><code class="docutils literal"><span class="pre">hg</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.svn"><code class="docutils literal"><span class="pre">svn</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.testing"><code class="docutils literal"><span class="pre">testing</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.WorkingDirectoryKeeper.active">active (anybox.recipe.odoo.utils.WorkingDirectoryKeeper attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.addons_paths">addons_paths (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.already_imported">already_imported() (in module anybox.recipe.odoo.runtime)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo">anybox.recipe.odoo (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.base">anybox.recipe.odoo.base (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.devtools">anybox.recipe.odoo.devtools (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime">anybox.recipe.odoo.runtime (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.session">anybox.recipe.odoo.runtime.session (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.start_openerp">anybox.recipe.odoo.runtime.start_openerp (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.test_openerp">anybox.recipe.odoo.runtime.test_openerp (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.upgrade">anybox.recipe.odoo.runtime.upgrade (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.server">anybox.recipe.odoo.server (module)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.testing">anybox.recipe.odoo.testing (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.utils">anybox.recipe.odoo.utils (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs">anybox.recipe.odoo.vcs (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.base">anybox.recipe.odoo.vcs.base (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.bzr">anybox.recipe.odoo.vcs.bzr (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.git">anybox.recipe.odoo.vcs.git (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.hg">anybox.recipe.odoo.vcs.hg (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.svn">anybox.recipe.odoo.vcs.svn (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.testing">anybox.recipe.odoo.vcs.testing (module)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.apply_odoo_requirements_file">apply_odoo_requirements_file() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.apply_version_dependent_decisions">apply_version_dependent_decisions() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.apply_version_dependent_decisions">(anybox.recipe.odoo.server.ServerRecipe method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.archive">archive() (anybox.recipe.odoo.testing.FakeRepo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.archive">(anybox.recipe.odoo.vcs.base.BaseRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.archive">(anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.archive">(anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.archive">(anybox.recipe.odoo.vcs.hg.HgRepo method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe">BaseRecipe (class in anybox.recipe.odoo.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo">BaseRepo (class in anybox.recipe.odoo.vcs.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.bool_opt_get">bool_opt_get() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.browse_ref">browse_ref() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.RecipeTestCase.build_babel_egg">build_babel_egg() (anybox.recipe.odoo.testing.RecipeTestCase method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.buildout_cfg_name">buildout_cfg_name() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch">BzrBranch (class in anybox.recipe.odoo.vcs.bzr)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.check_output">check_output() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.clean">clean() (anybox.recipe.odoo.vcs.base.BaseRepo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.clean">(anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.clean">(anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.clean">(anybox.recipe.odoo.vcs.hg.HgRepo method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.clean_environments">clean_environments() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.clean_object_files">clean_object_files() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.cleanup_openerp_dir">cleanup_openerp_dir() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.clear_import_registry">clear_import_registry() (in module anybox.recipe.odoo.runtime)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.clear_target">clear_target() (anybox.recipe.odoo.vcs.base.BaseRepo method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.clear_vcs_log">clear_vcs_log() (in module anybox.recipe.odoo.testing)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.clone_check_call">clone_check_call() (in module anybox.recipe.odoo.vcs.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.clone_check_output">clone_check_output() (in module anybox.recipe.odoo.vcs.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.CloneError">CloneError</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.close">close() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.conf_ensure_section">conf_ensure_section() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.conf_file_path">conf_file_path() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.testing.VcsTestCase.create_src">create_src() (anybox.recipe.odoo.vcs.testing.VcsTestCase method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.PersistentRevFakeRepo.current_revisions">current_revisions (anybox.recipe.odoo.testing.PersistentRevFakeRepo attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.dangerous_revisions">dangerous_revisions (anybox.recipe.odoo.vcs.git.GitRepo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.db_version">db_version (anybox.recipe.odoo.runtime.session.Session attribute)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.develop">develop() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.dump_nightly_latest_version">dump_nightly_latest_version() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.extract_downloads_to">extract_downloads_to() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo">FakeRepo (class in anybox.recipe.odoo.testing)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.fetch_remote_sha">fetch_remote_sha() (anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.RecipeTestCase.fill_working_set">fill_working_set() (anybox.recipe.odoo.testing.RecipeTestCase method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.finalize_addons_paths">finalize_addons_paths() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.freeze_to">freeze_to() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.get_current_remote_fetch">get_current_remote_fetch() (anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.get_revid">get_revid() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.get_update">get_update() (anybox.recipe.odoo.testing.FakeRepo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.get_update">(anybox.recipe.odoo.vcs.base.BaseRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.get_update">(anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.get_update">(anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.get_update">(anybox.recipe.odoo.vcs.hg.HgRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.svn.SvnCheckout.get_update">(anybox.recipe.odoo.vcs.svn.SvnCheckout method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.get_update">(in module anybox.recipe.odoo.vcs)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.get_vcs_log">get_vcs_log() (in module anybox.recipe.odoo.testing)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.git_version">git_version (anybox.recipe.odoo.vcs.git.GitRepo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo">GitRepo (class in anybox.recipe.odoo.vcs.git)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.handle_command_line_options">handle_command_line_options() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.has_commit">has_commit() (anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.have_fixed_revision">have_fixed_revision() (anybox.recipe.odoo.vcs.hg.HgRepo method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo">HgRepo (class in anybox.recipe.odoo.vcs.hg)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.init_cursor">init_cursor() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.init_environments">init_environments() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.init_git_version">init_git_version() (anybox.recipe.odoo.vcs.git.GitRepo class method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.start_openerp.insert_args">insert_args() (in module anybox.recipe.odoo.runtime.start_openerp)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.test_openerp.insert_args">(in module anybox.recipe.odoo.runtime.test_openerp)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.insert_odoo_git_addons">insert_odoo_git_addons() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.install">install() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.install_modules">install_modules() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.install_recipe_requirements">install_recipe_requirements() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.install_requirements">install_requirements() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.is_cursor_closed">is_cursor_closed() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.is_fixed_revision">is_fixed_revision() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.is_git_layout">is_git_layout (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.is_local_fixed_revision">is_local_fixed_revision() (anybox.recipe.odoo.testing.FakeRepo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.is_local_fixed_revision">(anybox.recipe.odoo.vcs.base.BaseRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.is_local_fixed_revision">(anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.is_local_fixed_revision">(anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.is_local_fixed_revision">(anybox.recipe.odoo.vcs.hg.HgRepo method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.is_object_file">is_object_file() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.is_revno">is_revno() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.is_stale_http_head">is_stale_http_head() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.is_versioned">is_versioned() (anybox.recipe.odoo.vcs.base.BaseRepo class method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.ishex">ishex() (in module anybox.recipe.odoo.vcs.git)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.list_develops">list_develops() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.devtools.load">load() (in module anybox.recipe.odoo.devtools)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.log">log (anybox.recipe.odoo.testing.FakeRepo attribute)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.log_call">log_call() (anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.log_std_options">log_std_options (anybox.recipe.odoo.testing.FakeRepo attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.start_openerp.main">main() (in module anybox.recipe.odoo.runtime.start_openerp)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.test_openerp.main">(in module anybox.recipe.odoo.runtime.test_openerp)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.main_download">main_download() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.main_http_caching">main_http_caching (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.MainSoftware">MainSoftware (class in anybox.recipe.odoo.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.major_version">major_version (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.major_version">major_version() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.make_absolute">make_absolute() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.RecipeTestCase.make_recipe">make_recipe() (anybox.recipe.odoo.testing.RecipeTestCase method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.merge">merge() (anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.merge_requirements">merge_requirements() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.merge_requirements">(anybox.recipe.odoo.server.ServerRecipe method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.name">name (anybox.recipe.odoo.testing.FakeRepo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.nightly_dl_url">nightly_dl_url (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.nightly_filenames">nightly_filenames (anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.TestingRecipe.nightly_filenames">(anybox.recipe.odoo.testing.TestingRecipe attribute)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.offline_update">offline_update() (anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.open">open() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.OpenERPVersion">OpenERPVersion (class in anybox.recipe.odoo.runtime.session)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.option_splitlines">option_splitlines() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.option_strip">option_strip() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.package_version">package_version (anybox.recipe.odoo.runtime.session.Session attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.parents">parents() (anybox.recipe.odoo.testing.FakeRepo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.parents">(anybox.recipe.odoo.vcs.base.BaseRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.parents">(anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.parents">(anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.parents">(anybox.recipe.odoo.vcs.hg.HgRepo method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.OpenERPVersion.parse">parse() (anybox.recipe.odoo.runtime.session.OpenERPVersion method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.parse_addons">parse_addons() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.parse_conf">parse_conf() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.parse_merges">parse_merges() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.parse_revisions">parse_revisions() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.parse_version">parse_version() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.parse_version_string">parse_version_string() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.PersistentRevFakeRepo">PersistentRevFakeRepo (class in anybox.recipe.odoo.testing)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.preinstall_version_check">preinstall_version_check() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.query_remote_ref">query_remote_ref() (anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.read_openerp_setup">read_openerp_setup() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.read_release">read_release() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.ready">ready() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.recipe_requirements">recipe_requirements (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.recipe_requirements">(anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.recipe_requirements_paths">recipe_requirements_paths (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.RecipeTestCase">RecipeTestCase (class in anybox.recipe.odoo.testing)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.ref">ref() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.registry">registry() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.release_dl_url">release_dl_url (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.TestingRecipe.release_dl_url">(anybox.recipe.odoo.testing.TestingRecipe attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.release_filenames">release_filenames (anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.TestingRecipe.release_filenames">(anybox.recipe.odoo.testing.TestingRecipe attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.repo">repo() (in module anybox.recipe.odoo.vcs)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.requirements">requirements (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.requirements">(anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.retrieve_addons">retrieve_addons() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.retrieve_main_software">retrieve_main_software() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.retrieve_merges">retrieve_merges() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.revert">revert() (anybox.recipe.odoo.testing.FakeRepo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.revert">(anybox.recipe.odoo.vcs.base.BaseRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.revert">(anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.revert">(anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.revert_sources">revert_sources() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.revision">revision (anybox.recipe.odoo.testing.FakeRepo attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.PersistentRevFakeRepo.revision">(anybox.recipe.odoo.testing.PersistentRevFakeRepo attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.revision_id">revision_id() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.rfc822_time">rfc822_time() (in module anybox.recipe.odoo.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.rollback">rollback() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.rollback_conf">rollback_conf() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.sandboxed_tar_extract">sandboxed_tar_extract() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.server_wide_modules">server_wide_modules (anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe">ServerRecipe (class in anybox.recipe.odoo.server)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session">Session (class in anybox.recipe.odoo.runtime.session)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.RecipeTestCase.setUp">setUp() (anybox.recipe.odoo.testing.RecipeTestCase method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.testing.VcsTestCase.setUp">(anybox.recipe.odoo.vcs.testing.VcsTestCase method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.soft_requirements">soft_requirements (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.soft_requirements">(anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.svn.SvnCheckout">SvnCheckout (class in anybox.recipe.odoo.vcs.svn)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.RecipeTestCase.tearDown">tearDown() (anybox.recipe.odoo.testing.RecipeTestCase method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.testing.VcsTestCase.tearDown">(anybox.recipe.odoo.vcs.testing.VcsTestCase method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.template_upgrade_script">template_upgrade_script (anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.TestingRecipe">TestingRecipe (class in anybox.recipe.odoo.testing)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.total_seconds">total_seconds() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.PersistentRevFakeRepo.uncommitted_changes">uncommitted_changes() (anybox.recipe.odoo.testing.PersistentRevFakeRepo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.BaseRepo.uncommitted_changes">(anybox.recipe.odoo.vcs.base.BaseRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.uncommitted_changes">(anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.uncommitted_changes">(anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.uncommitted_changes">(anybox.recipe.odoo.vcs.hg.HgRepo method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.update">update() (anybox.recipe.odoo.base.BaseRecipe method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.update_check_call">update_check_call() (in module anybox.recipe.odoo.vcs.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.update_check_output">update_check_output() (in module anybox.recipe.odoo.vcs.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.update_conf">update_conf() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.update_fetched_branch">update_fetched_branch() (anybox.recipe.odoo.vcs.git.GitRepo method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.update_hgrc_paths">update_hgrc_paths() (anybox.recipe.odoo.vcs.hg.HgRepo method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.update_modules">update_modules() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.update_modules_list">update_modules_list() (anybox.recipe.odoo.runtime.session.Session method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.UpdateError">UpdateError</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.upgrade.upgrade">upgrade() (in module anybox.recipe.odoo.runtime.upgrade)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.use_or_open">use_or_open() (in module anybox.recipe.odoo.utils)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.testing.FakeRepo.vcs_control_dir">vcs_control_dir (anybox.recipe.odoo.testing.FakeRepo attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.vcs_control_dir">(anybox.recipe.odoo.vcs.bzr.BzrBranch attribute)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.vcs_control_dir">(anybox.recipe.odoo.vcs.git.GitRepo attribute)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.vcs_control_dir">(anybox.recipe.odoo.vcs.hg.HgRepo attribute)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.svn.SvnCheckout.vcs_control_dir">(anybox.recipe.odoo.vcs.svn.SvnCheckout attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.vcs_official_name">vcs_official_name (anybox.recipe.odoo.vcs.bzr.BzrBranch attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.git.GitRepo.vcs_official_name">(anybox.recipe.odoo.vcs.git.GitRepo attribute)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.hg.HgRepo.vcs_official_name">(anybox.recipe.odoo.vcs.hg.HgRepo attribute)</a>
+  </dt>
+
+        
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.svn.SvnCheckout.vcs_official_name">(anybox.recipe.odoo.vcs.svn.SvnCheckout attribute)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.testing.VcsTestCase">VcsTestCase (class in anybox.recipe.odoo.vcs.testing)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.session.Session.version_file_path">version_file_path (anybox.recipe.odoo.runtime.session.Session attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.with_gunicorn">with_gunicorn (anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.base.BaseRecipe.with_odoo_requirements_file">with_odoo_requirements_file (anybox.recipe.odoo.base.BaseRecipe attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.with_upgrade">with_upgrade (anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.utils.WorkingDirectoryKeeper">WorkingDirectoryKeeper (class in anybox.recipe.odoo.utils)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.base.wrap_check_call">wrap_check_call() (in module anybox.recipe.odoo.vcs.base)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.vcs.html#anybox.recipe.odoo.vcs.bzr.BzrBranch.write_conf">write_conf() (anybox.recipe.odoo.vcs.bzr.BzrBranch method)</a>
+  </dt>
+
+      
+  <dt><a href="apidoc/anybox.recipe.odoo.html#anybox.recipe.odoo.server.ServerRecipe.ws">ws (anybox.recipe.odoo.server.ServerRecipe attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2011-2015, &lt;a href=&#34;http://anybox.fr/&#34;&gt;Anybox SAS&lt;/a&gt; and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

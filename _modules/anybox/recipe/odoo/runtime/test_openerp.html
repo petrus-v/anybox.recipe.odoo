@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>anybox.recipe.odoo.runtime.test_openerp &mdash; Odoo buildout recipe 1.9.2.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/united.anybox.bootswatch.bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/anybox.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '1.9.2.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="top" title="Odoo buildout recipe 1.9.2.dev0 documentation" href="../../../../../index.html" />
+    <link rel="up" title="anybox.recipe.odoo.runtime" href="../runtime.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../../../index.html"><img src="../../../../../_static/logo.png">
+          Odoo buildout recipe</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.9</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../../../../index.html">Home</a></li>
+                <li><a href="http://anybox.fr">Anybox</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../first_steps.html">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../first_steps.html#how-to-create-and-bootstrap-a-buildout">How to create and bootstrap a buildout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../first_steps.html#example-openerp-7-0-buildouts">Example OpenERP 7.0 buildouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../first_steps.html#example-openerp-6-1-buildout-with-a-custom-addon">Example OpenERP 6.1 buildout with a custom addon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../first_steps.html#example-openerp-6-0-buildout-server-and-clients">Example OpenERP 6.0 buildout (server and clients)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../first_steps.html#continuously-tested-examples">Continuously tested examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../first_steps.html#other-sample-buildouts">Other sample buildouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../configuration.html">Configuration reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../configuration.html#the-buildout-configuration-file-and-parts">The buildout configuration file and parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../configuration.html#odoo-recipes">Odoo recipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../configuration.html#options-for-assembly-and-source-management">Options for assembly and source management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../configuration.html#odoo-options">Odoo options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../configuration.html#options-for-executables-generation-and-serving">Options for executables generation and serving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../configuration.html#options-for-development-qa-and-introspection">Options for development, QA and introspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../configuration.html#options-for-download-and-caching-strategies">Options for download and caching strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../configuration.html#options-for-release-and-packaging">Options for release and packaging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../scripts.html">Odoo Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../scripts.html#use-cases">Use cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../scripts.html#declaring-odoo-scripts">Declaring Odoo Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../scripts.html#interactive-consoles">Interactive Consoles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../scripts.html#writing-odoo-scripts">Writing Odoo Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../scripts.html#upgrade-scripts">Upgrade scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../scripts.html#startup-scripts">Startup scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../scripts.html#list-of-internal-entry-points">List of internal entry points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../dev_prod_workflow.html">Full development to production example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../dev_prod_workflow.html#common-setup">Common setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../dev_prod_workflow.html#developer-s-setup">Developer&#8217;s setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../dev_prod_workflow.html#release-and-packaging">Release and packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../dev_prod_workflow.html#deployment-with-a-server-local-configuration-file">Deployment with a server-local configuration file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contributing.html">For contributors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../contributing.html#source-and-tracking">Source and tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../contributing.html#using-a-development-version">Using a development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../contributing.html#development-setup">Development setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../contributing.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../contributing.html#coding-style">Coding style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../contributing.html#launching-static-analysis-and-unit-tests">Launching static analysis and unit tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../contributing.html#integration-tests">Integration tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../contributing.html#continuous-integration">Continuous integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../devnotes/index.html">Development notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../devnotes/git-sparse-shallow.html">Git shallow clones and selective branch fetching</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.html">anybox.recipe.odoo Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.html#id1"><code class="docutils literal"><span class="pre">anybox.recipe.odoo</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.base"><code class="docutils literal"><span class="pre">base</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.devtools"><code class="docutils literal"><span class="pre">devtools</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.server"><code class="docutils literal"><span class="pre">server</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.testing"><code class="docutils literal"><span class="pre">testing</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.html#module-anybox.recipe.odoo.utils"><code class="docutils literal"><span class="pre">utils</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.html#subpackages">Subpackages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.runtime.html">runtime Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime"><code class="docutils literal"><span class="pre">runtime</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.session"><code class="docutils literal"><span class="pre">session</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.upgrade"><code class="docutils literal"><span class="pre">upgrade</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.start_openerp"><code class="docutils literal"><span class="pre">start_openerp</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.runtime.html#module-anybox.recipe.odoo.runtime.test_openerp"><code class="docutils literal"><span class="pre">test_openerp</span></code> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.vcs.html">vcs Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs"><code class="docutils literal"><span class="pre">vcs</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.base"><code class="docutils literal"><span class="pre">base</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.bzr"><code class="docutils literal"><span class="pre">bzr</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.git"><code class="docutils literal"><span class="pre">git</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.hg"><code class="docutils literal"><span class="pre">hg</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.svn"><code class="docutils literal"><span class="pre">svn</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../apidoc/anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.testing"><code class="docutils literal"><span class="pre">testing</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <h1>Source code for anybox.recipe.odoo.runtime.test_openerp</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<div class="viewcode-block" id="insert_args"><a class="viewcode-back" href="../../../../../apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.test_openerp.insert_args">[docs]</a><span class="k">def</span> <span class="nf">insert_args</span><span class="p">(</span><span class="n">arguments</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">arguments</span><span class="p">):</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../../../apidoc/anybox.recipe.odoo.runtime.html#anybox.recipe.odoo.runtime.test_openerp.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">starter</span><span class="p">,</span> <span class="n">conf</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="p">()):</span>
+    <span class="k">if</span> <span class="n">version</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">log_level</span> <span class="o">=</span> <span class="s">&#39;test&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">log_level</span> <span class="o">=</span> <span class="s">&#39;info&#39;</span>
+    <span class="n">arguments</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;-c&#39;</span><span class="p">,</span> <span class="n">conf</span><span class="p">,</span> <span class="s">&#39;--log-level&#39;</span><span class="p">,</span> <span class="n">log_level</span><span class="p">,</span> <span class="s">&#39;--stop-after-init&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">version</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">arguments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;--test-enable&#39;</span><span class="p">)</span>
+
+    <span class="n">insert_args</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">starter</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">glob</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()</span>
+    <span class="n">glob</span><span class="p">[</span><span class="s">&#39;__name__&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;__main__&#39;</span>
+    <span class="n">glob</span><span class="p">[</span><span class="s">&#39;__file__&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">starter</span>
+    <span class="nb">execfile</span><span class="p">(</span><span class="n">starter</span><span class="p">,</span> <span class="nb">globals</span><span class="p">())</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2011-2015, &lt;a href=&#34;http://anybox.fr/&#34;&gt;Anybox SAS&lt;/a&gt; and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

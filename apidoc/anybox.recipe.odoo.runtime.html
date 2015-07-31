@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>runtime Subpackage &mdash; Odoo buildout recipe 1.9.2.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/united.anybox.bootswatch.bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/anybox.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.9.2.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Odoo buildout recipe 1.9.2.dev0 documentation" href="../index.html" />
+    <link rel="next" title="vcs Subpackage" href="anybox.recipe.odoo.vcs.html" />
+    <link rel="prev" title="vcs Subpackage" href="anybox.recipe.odoo.vcs.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/logo.png">
+          Odoo buildout recipe</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.9</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="http://anybox.fr">Anybox</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../first_steps.html">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../first_steps.html#how-to-create-and-bootstrap-a-buildout">How to create and bootstrap a buildout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../first_steps.html#example-openerp-7-0-buildouts">Example OpenERP 7.0 buildouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../first_steps.html#example-openerp-6-1-buildout-with-a-custom-addon">Example OpenERP 6.1 buildout with a custom addon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../first_steps.html#example-openerp-6-0-buildout-server-and-clients">Example OpenERP 6.0 buildout (server and clients)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../first_steps.html#continuously-tested-examples">Continuously tested examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../first_steps.html#other-sample-buildouts">Other sample buildouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#the-buildout-configuration-file-and-parts">The buildout configuration file and parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#odoo-recipes">Odoo recipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#options-for-assembly-and-source-management">Options for assembly and source management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#odoo-options">Odoo options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#options-for-executables-generation-and-serving">Options for executables generation and serving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#options-for-development-qa-and-introspection">Options for development, QA and introspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#options-for-download-and-caching-strategies">Options for download and caching strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#options-for-release-and-packaging">Options for release and packaging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scripts.html">Odoo Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html#use-cases">Use cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html#declaring-odoo-scripts">Declaring Odoo Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html#interactive-consoles">Interactive Consoles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html#writing-odoo-scripts">Writing Odoo Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html#upgrade-scripts">Upgrade scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html#startup-scripts">Startup scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripts.html#list-of-internal-entry-points">List of internal entry points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_prod_workflow.html">Full development to production example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dev_prod_workflow.html#common-setup">Common setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev_prod_workflow.html#developer-s-setup">Developer&#8217;s setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev_prod_workflow.html#release-and-packaging">Release and packaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev_prod_workflow.html#deployment-with-a-server-local-configuration-file">Deployment with a server-local configuration file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">For contributors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#source-and-tracking">Source and tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#using-a-development-version">Using a development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#development-setup">Development setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#coding-style">Coding style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#launching-static-analysis-and-unit-tests">Launching static analysis and unit tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#integration-tests">Integration tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#continuous-integration">Continuous integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devnotes/index.html">Development notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../devnotes/git-sparse-shallow.html">Git shallow clones and selective branch fetching</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="anybox.recipe.odoo.html">anybox.recipe.odoo Package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.html#id1"><code class="docutils literal"><span class="pre">anybox.recipe.odoo</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.html#module-anybox.recipe.odoo.base"><code class="docutils literal"><span class="pre">base</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.html#module-anybox.recipe.odoo.devtools"><code class="docutils literal"><span class="pre">devtools</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.html#module-anybox.recipe.odoo.server"><code class="docutils literal"><span class="pre">server</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.html#module-anybox.recipe.odoo.testing"><code class="docutils literal"><span class="pre">testing</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.html#module-anybox.recipe.odoo.utils"><code class="docutils literal"><span class="pre">utils</span></code> Module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="anybox.recipe.odoo.html#subpackages">Subpackages</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">runtime Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-anybox.recipe.odoo.runtime"><code class="docutils literal"><span class="pre">runtime</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-anybox.recipe.odoo.runtime.session"><code class="docutils literal"><span class="pre">session</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-anybox.recipe.odoo.runtime.upgrade"><code class="docutils literal"><span class="pre">upgrade</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-anybox.recipe.odoo.runtime.start_openerp"><code class="docutils literal"><span class="pre">start_openerp</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-anybox.recipe.odoo.runtime.test_openerp"><code class="docutils literal"><span class="pre">test_openerp</span></code> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="anybox.recipe.odoo.vcs.html">vcs Subpackage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs"><code class="docutils literal"><span class="pre">vcs</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.base"><code class="docutils literal"><span class="pre">base</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.bzr"><code class="docutils literal"><span class="pre">bzr</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.git"><code class="docutils literal"><span class="pre">git</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.hg"><code class="docutils literal"><span class="pre">hg</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.svn"><code class="docutils literal"><span class="pre">svn</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anybox.recipe.odoo.vcs.html#module-anybox.recipe.odoo.vcs.testing"><code class="docutils literal"><span class="pre">testing</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">runtime Subpackage</a><ul>
+<li><a class="reference internal" href="#module-anybox.recipe.odoo.runtime"><code class="docutils literal"><span class="pre">runtime</span></code> Package</a><ul>
+<li><a class="reference internal" href="#runtime">Runtime</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-anybox.recipe.odoo.runtime.session"><code class="docutils literal"><span class="pre">session</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-anybox.recipe.odoo.runtime.upgrade"><code class="docutils literal"><span class="pre">upgrade</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-anybox.recipe.odoo.runtime.start_openerp"><code class="docutils literal"><span class="pre">start_openerp</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-anybox.recipe.odoo.runtime.test_openerp"><code class="docutils literal"><span class="pre">test_openerp</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="anybox.recipe.odoo.vcs.html" title="Previous Chapter: vcs Subpackage"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; vcs Subpackage</span>
+    </a>
+  </li>
+  <li>
+    <a href="anybox.recipe.odoo.vcs.html" title="Next Chapter: vcs Subpackage"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">vcs Subpackage &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/apidoc/anybox.recipe.odoo.runtime.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="runtime-subpackage">
+<h1>runtime Subpackage<a class="headerlink" href="#runtime-subpackage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-anybox.recipe.odoo.runtime">
+<span id="runtime-package"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">runtime</span></code> Package<a class="headerlink" href="#module-anybox.recipe.odoo.runtime" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="runtime">
+<h3>Runtime<a class="headerlink" href="#runtime" title="Permalink to this headline">¶</a></h3>
+<p>This subpackage provides encapsulations and entry points for the application
+itself:</p>
+<ul class="simple">
+<li>the <code class="docutils literal"><span class="pre">session</span></code> module features the supporting objects for &#8220;Odoo scripts&#8221;
+and the dedicated python interpreter.</li>
+<li>the <code class="docutils literal"><span class="pre">start_openerp</span></code> and <code class="docutils literal"><span class="pre">test_openerp</span></code> modules are the entry points for
+the main startup scripts.</li>
+</ul>
+<p>This architecture is meant in particular to provide stability and uniformity
+accross Odoo major versions, so that the recipe can be leveraged by
+automated deploymnent tools and continuous integration systems.</p>
+<dl class="function">
+<dt id="anybox.recipe.odoo.runtime.already_imported">
+<code class="descclassname">anybox.recipe.odoo.runtime.</code><code class="descname">already_imported</code><span class="sig-paren">(</span><em>module_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime.html#already_imported"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.already_imported" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience to help some Odoo modules to avoid been imported twice.</p>
+<p>Each call of this function returns a boolean indicated whether the
+specified module was already in the <code class="docutils literal"><span class="pre">imported_addons</span></code> registry and add it
+inconditionnally.</p>
+<p>Thus caller code is expected to import the module right away if the
+return value was False.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="anybox.recipe.odoo.runtime.clear_import_registry">
+<code class="descclassname">anybox.recipe.odoo.runtime.</code><code class="descname">clear_import_registry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime.html#clear_import_registry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.clear_import_registry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-anybox.recipe.odoo.runtime.session">
+<span id="session-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">session</span></code> Module<a class="headerlink" href="#module-anybox.recipe.odoo.runtime.session" title="Permalink to this headline">¶</a></h2>
+<p>Utilities to start a server process.</p>
+<dl class="class">
+<dt id="anybox.recipe.odoo.runtime.session.OpenERPVersion">
+<em class="property">class </em><code class="descclassname">anybox.recipe.odoo.runtime.session.</code><code class="descname">OpenERPVersion</code><span class="sig-paren">(</span><em>vstring=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#OpenERPVersion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.OpenERPVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">distutils.version.Version</span></code></p>
+<p>Odoo idea of version, wrapped in a class.</p>
+<p>This is based on <code class="xref py py-meth docutils literal"><span class="pre">openerp.tools.parse_version()</span></code>, and
+Provides straight-ahead comparison with tuples of integers, or
+distutils Version classes.</p>
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.OpenERPVersion.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>incoming</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#OpenERPVersion.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.OpenERPVersion.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="anybox.recipe.odoo.runtime.session.Session">
+<em class="property">class </em><code class="descclassname">anybox.recipe.odoo.runtime.session.</code><code class="descname">Session</code><span class="sig-paren">(</span><em>conffile</em>, <em>buildout_dir</em>, <em>parse_config=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A class to give server-level access to one database.</p>
+<p>There should be exactly one instance of this class per process.
+It can be used for any kind of script involving Odoo API, and provides
+facilities for upgrade scripts (see also
+:mod:anybox.recipe.odoo.runtime.upgrade)</p>
+<p>Before actual use, call <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.open" title="anybox.recipe.odoo.runtime.session.Session.open"><code class="xref py py-meth docutils literal"><span class="pre">open()</span></code></a>.
+Then you&#8217;ll have useful attributes and methods reminiscent of the unit test
+classes:</p>
+<ul class="simple">
+<li><code class="xref py py-attr docutils literal"><span class="pre">cr</span></code>: a cursor</li>
+<li><code class="xref py py-attr docutils literal"><span class="pre">uid</span></code>: user id</li>
+<li><a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.registry" title="anybox.recipe.odoo.runtime.session.Session.registry"><code class="xref py py-attr docutils literal"><span class="pre">registry</span></code></a>: access to model objects</li>
+<li><code class="xref py py-attr docutils literal"><span class="pre">is_initialization</span></code>: True if and only if the database was not
+initialized before the call to <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.open" title="anybox.recipe.odoo.runtime.session.Session.open"><code class="xref py py-meth docutils literal"><span class="pre">open()</span></code></a></li>
+</ul>
+<p>Example application code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">session</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">db_name</span><span class="o">=</span><span class="s">&quot;my_db&quot;</span><span class="p">)</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">registry</span><span class="p">(</span><span class="s">&#39;res_users&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">browse</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">cr</span><span class="p">,</span> <span class="n">session</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">session</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Transaction management is up to user code</p>
+<p>Upgrade scripts writers should check the version handling properties:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.db_version" title="anybox.recipe.odoo.runtime.session.Session.db_version"><code class="xref py py-meth docutils literal"><span class="pre">db_version()</span></code></a></li>
+<li><a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.package_version" title="anybox.recipe.odoo.runtime.session.Session.package_version"><code class="xref py py-meth docutils literal"><span class="pre">package_version()</span></code></a></li>
+</ul>
+<p>Instantiation is done by passing the path to Odoo main
+configuration file and the path of the buildout directory.</p>
+<p>Usually, instantiation code is written by the recipe in the body of the
+executable &#8220;Odoo scripts&#8221; it produces.
+Script writers provide a callable that takes a
+<a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session" title="anybox.recipe.odoo.runtime.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> object argument and declare it as a console script entry
+point in their distribution.
+End users can reference such entry points in their buildout configurations
+to have buildout produce the actual executable. See <a class="reference internal" href="../scripts.html"><em>Odoo Scripts</em></a>
+for details.</p>
+<p>Upgrade scripts are a special case of that process, in which the entry
+point is actually provided by the recipe and rewraps a user-level
+source script.</p>
+<p>Later versions of the recipe may find a way to pass the whole buildout
+configuration (recall that this is to be used in a separate process in
+which the buildout configuration has not been parsed).</p>
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.browse_ref">
+<code class="descname">browse_ref</code><span class="sig-paren">(</span><em>external_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.browse_ref"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.browse_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ir.model.data browse object from its external identifier.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>external_id</strong> &#8211; External identifier of form module.name.
+e.g. base.user_root</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">ValueError if not found or external_id malformed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.clean_environments">
+<code class="descname">clean_environments</code><span class="sig-paren">(</span><em>reinit=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.clean_environments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.clean_environments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans the thread-local environment.</p>
+<p>See <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.init_environments" title="anybox.recipe.odoo.runtime.session.Session.init_environments"><code class="xref py py-meth docutils literal"><span class="pre">init_environments()</span></code></a> for more details.
+This method does nothing if the environments have not been initialized.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>reinit</strong> (<em>bool</em>) &#8211; if <code class="docutils literal"><span class="pre">True</span></code>, <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.init_environments" title="anybox.recipe.odoo.runtime.session.Session.init_environments"><code class="xref py py-meth docutils literal"><span class="pre">init_environments()</span></code></a> will be
+called again after cleaning</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the cursor and forget about the current database.</p>
+<p>The session is thus ready to open another database.
+This methods should be idempotent, wouldn&#8217;t fail if the cursor is
+already closed or the current database is not in registry (either
+already deleted, or could not be opened at all)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="anybox.recipe.odoo.runtime.session.Session.db_version">
+<code class="descname">db_version</code><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.db_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settable property for version stored in DB of the whole buildout.</p>
+<p>This can be thought as the latest version to which the DB has been
+upgraded to.
+A simple caching system to avoid querying the DB multiple times is
+implemented.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.handle_command_line_options">
+<code class="descname">handle_command_line_options</code><span class="sig-paren">(</span><em>to_handle</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.handle_command_line_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.handle_command_line_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle prescribed command line options and eat them.</p>
+<p>Anything before first occurrence of <code class="docutils literal"><span class="pre">--</span></code> on the command-line is taken
+into account and removed from <code class="docutils literal"><span class="pre">sys.argv</span></code>.</p>
+<p>Help messages:</p>
+<p>If -h or &#8211;help is specified  and &#8211; is not, the help for the wrapper
+will be printed, and the -h/&#8211;help option kept in sys.argv.</p>
+<p>If -h or &#8211;help is specified before &#8211;, the help for this wrapper will
+be printed and options after &#8211; will be kept in sys.argv.</p>
+<p>if -h or &#8211;help is specified after &#8211;, it will be ignored at this
+stage, and kept in sys.argv (in most cases triggering help print for
+the wrapped script).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.init_cursor">
+<code class="descname">init_cursor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.init_cursor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.init_cursor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.init_environments">
+<code class="descname">init_environments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.init_environments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.init_environments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enter the environments context manager, but don&#8217;t leave it</p>
+<p>Automatically called by <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.open" title="anybox.recipe.odoo.runtime.session.Session.open"><code class="xref py py-meth docutils literal"><span class="pre">open()</span></code></a> and registry altering methods.
+See :class:<code class="docutils literal"><span class="pre">openerp.api.Environment</span></code> for explanations about
+environments.</p>
+<p>For OpenERP/Odoo versions prior to the new style API merge, this
+is a no-op.</p>
+<p>This thread-local <code class="docutils literal"><span class="pre">environments</span></code> is initialized and cleaned with
+each request in the normal usage of the framework.
+That&#8217;s why is is provided as a context manager.</p>
+<p>Therefore, user code probably needs in some case to clean it to avoid
+side effects. This can be done by calling <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.clean_environments" title="anybox.recipe.odoo.runtime.session.Session.clean_environments"><code class="xref py py-meth docutils literal"><span class="pre">clean_environments()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.install_modules">
+<code class="descname">install_modules</code><span class="sig-paren">(</span><em>modules</em>, <em>db=None</em>, <em>update_modules_list=True</em>, <em>open_with_demo=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.install_modules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.install_modules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Install the modules in the database.</p>
+<p>Has the side effect of closing the current cursor, committing if and
+only if the list of modules is updated.</p>
+<p>Demo data loading is handled consistently with the decision taken
+by <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.open" title="anybox.recipe.odoo.runtime.session.Session.open"><code class="xref py py-meth docutils literal"><span class="pre">open()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>db</strong> &#8211; Database name. If not specified, it is assumed to have
+already been opened with <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.open" title="anybox.recipe.odoo.runtime.session.Session.open"><code class="xref py py-meth docutils literal"><span class="pre">open()</span></code></a>, e.g, for a prior
+read of <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.db_version" title="anybox.recipe.odoo.runtime.session.Session.db_version"><code class="xref py py-meth docutils literal"><span class="pre">db_version()</span></code></a>.
+If it is specified, then the session in particular opens
+that db and will use it afterwards whether another one
+was already opened or not.</li>
+<li><strong>modules</strong> &#8211; any iterable of module names.</li>
+<li><strong>update_modules_list</strong> &#8211; if True, will update the module lists
+<em>and commit</em> before the install begins.</li>
+<li><strong>open_with_demo</strong> &#8211; if <code class="docutils literal"><span class="pre">db</span></code> is not None, will be passed to
+<a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.open" title="anybox.recipe.odoo.runtime.session.Session.open"><code class="xref py py-meth docutils literal"><span class="pre">open()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.is_cursor_closed">
+<code class="descname">is_cursor_closed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.is_cursor_closed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.is_cursor_closed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compatibility wrapper.</p>
+<p>On OpenERP 7, the attribute is <code class="docutils literal"><span class="pre">__closed</span></code> but can&#8217;t even be accessed
+if the cursor is closed (<code class="docutils literal"><span class="pre">OperationalError</span></code> is raised systematically
+in <code class="docutils literal"><span class="pre">sql_db</span></code>)</p>
+<p>On Odoo 8, the attribute is <code class="docutils literal"><span class="pre">_closed</span></code> and works correctly.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>db=None</em>, <em>with_demo=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the database</p>
+<p>Loading an empty database in Odoo has the side effect of installing
+the <code class="docutils literal"><span class="pre">base</span></code> module. Whether to loading demo data or not has therefore
+to be decided right away.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>db</strong> &#8211; database name. If not specified, the same cascading of
+defaults as Odoo mainstream will be applied:
+configuration file, psycopg2/lipq defaults.</li>
+<li><strong>with_demo</strong> &#8211; <p>controls the loading of demo data for all
+module installations triggered by this call to
+<a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.open" title="anybox.recipe.odoo.runtime.session.Session.open"><code class="xref py py-meth docutils literal"><span class="pre">open()</span></code></a> and further uses of <code class="xref py py-meth docutils literal"><span class="pre">load_modules()</span></code>
+on this <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session" title="anybox.recipe.odoo.runtime.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> instance:</p>
+<ul>
+<li>if <code class="docutils literal"><span class="pre">True</span></code>, demo data will uniformly be loaded</li>
+<li>if <code class="docutils literal"><span class="pre">False</span></code>, no demo data will be loaded</li>
+<li>if <code class="docutils literal"><span class="pre">None</span></code>, demo data will be loaded according to
+the value of <code class="docutils literal"><span class="pre">without_demo</span></code> in configuration</li>
+</ul>
+<p>In all cases, the behaviour will stay consistent
+until the next call of <code class="docutils literal"><span class="pre">open()</span></code>, but the
+implementation does not protect against any race
+conditions in Odoo internals.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="anybox.recipe.odoo.runtime.session.Session.package_version">
+<code class="descname">package_version</code><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.package_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property reading the version file from buildout directory.</p>
+<p>Comments introduced with a hash are accepted.
+Only the first significant line is taken into account.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.parse_version_string">
+<code class="descname">parse_version_string</code><span class="sig-paren">(</span><em>vstring</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.parse_version_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.parse_version_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stable method for downstream code needing to instantiate a version.</p>
+<p>This method returns an appropriate version instance, without
+any dependency on where to import the class from. Especially useful
+for applications whose life started before this set of utilities has
+been used : this helps building an usable default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.ready">
+<code class="descname">ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.ready"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.ready" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.ref">
+<code class="descname">ref</code><span class="sig-paren">(</span><em>external_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.ref"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ir.model.data object id from its external identifier.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>external_id</strong> &#8211; External identifier of form module.name.
+e.g. base.user_root</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">ValueError if not found or external_id malformed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.registry">
+<code class="descname">registry</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.registry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.registry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lookup model by name and return a ready-to-work instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.rollback">
+<code class="descname">rollback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.rollback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.rollback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.update_modules">
+<code class="descname">update_modules</code><span class="sig-paren">(</span><em>modules</em>, <em>db=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.update_modules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.update_modules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the prescribed modules in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>db</strong> &#8211; Database name. If not specified, it is assumed to have
+already been opened with <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.open" title="anybox.recipe.odoo.runtime.session.Session.open"><code class="xref py py-meth docutils literal"><span class="pre">open()</span></code></a>, e.g, for a prior
+read of <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session.db_version" title="anybox.recipe.odoo.runtime.session.Session.db_version"><code class="xref py py-meth docutils literal"><span class="pre">db_version()</span></code></a>.
+If it is specified, then the session in particular opens
+that db and will use it afterwards whether another one
+was already opened or not.</li>
+<li><strong>modules</strong> &#8211; any iterable of module names.
+Not installed modules will be ignored
+The special name <code class="docutils literal"><span class="pre">'all'</span></code> triggers the update of
+all installed modules.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="anybox.recipe.odoo.runtime.session.Session.update_modules_list">
+<code class="descname">update_modules_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/session.html#Session.update_modules_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.update_modules_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the list of available Odoo modules, like the UI allows to.</p>
+<p>This is necessary prior to install of any new module.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="anybox.recipe.odoo.runtime.session.Session.version_file_path">
+<code class="descname">version_file_path</code><a class="headerlink" href="#anybox.recipe.odoo.runtime.session.Session.version_file_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Absolute path of the flat file storing the package version.</p>
+<p>For now this is not configurable, a later version might read it
+from buildout configuration.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-anybox.recipe.odoo.runtime.upgrade">
+<span id="upgrade-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">upgrade</span></code> Module<a class="headerlink" href="#module-anybox.recipe.odoo.runtime.upgrade" title="Permalink to this headline">¶</a></h2>
+<p>Uniform encapsulation of buildout-local upgrade script.</p>
+<p>The idea is to provide a common set of options, so that upgrade scripts all
+have the same interface, and project maintainers can focus on the decision
+taking logic.</p>
+<dl class="function">
+<dt id="anybox.recipe.odoo.runtime.upgrade.upgrade">
+<code class="descclassname">anybox.recipe.odoo.runtime.upgrade.</code><code class="descname">upgrade</code><span class="sig-paren">(</span><em>upgrade_script</em>, <em>upgrade_callable</em>, <em>conf</em>, <em>buildout_dir</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/upgrade.html#upgrade"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.upgrade.upgrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the upgrade from a source file.</p>
+<p>All arguments are set in the standalone script produced by buildout through
+entry point options.</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">upgrade_script</span></code>: absolute path to the upgrade script python source.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">upgrade_callable</span></code>: name of the callable in source file actually
+running the script.</p>
+<p>It must accept the two following positional arguments, in that order:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a <a class="reference internal" href="#anybox.recipe.odoo.runtime.session.Session" title="anybox.recipe.odoo.runtime.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> instance (as in standard &#8220;Odoo scripts&#8221;)</li>
+<li>a logger (standard object from the <code class="xref py py-mod docutils literal"><span class="pre">logging</span></code> module)</li>
+</ul>
+</div></blockquote>
+<p>and may return a non zero status code to indicate an error.
+Both <code class="docutils literal"><span class="pre">None</span></code> and 0 are interpreted as success.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">conf</span></code>: path to the Odoo configuration file (managed by the recipe)</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">buildout_dir</span></code>: directory of the buildout</p>
+</li>
+</ul>
+</dd></dl>
+
+</div>
+<div class="section" id="module-anybox.recipe.odoo.runtime.start_openerp">
+<span id="start-openerp-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">start_openerp</span></code> Module<a class="headerlink" href="#module-anybox.recipe.odoo.runtime.start_openerp" title="Permalink to this headline">¶</a></h2>
+<p>This module bridges the classical <code class="docutils literal"><span class="pre">openerp-server</span></code> as a console script.</p>
+<p>The <a class="reference internal" href="#anybox.recipe.odoo.runtime.start_openerp.main" title="anybox.recipe.odoo.runtime.start_openerp.main"><code class="xref py py-func docutils literal"><span class="pre">main()</span></code></a> function gets registered on the fly by the server recipe as
+a console script entry point and used in particular for <code class="docutils literal"><span class="pre">start_openerp</span></code> and
+<code class="docutils literal"><span class="pre">test_openerp</span></code>.</p>
+<p>Some version independence logic for the startup process also get bootstrapped
+from here.</p>
+<dl class="function">
+<dt id="anybox.recipe.odoo.runtime.start_openerp.insert_args">
+<code class="descclassname">anybox.recipe.odoo.runtime.start_openerp.</code><code class="descname">insert_args</code><span class="sig-paren">(</span><em>arguments</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/start_openerp.html#insert_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.start_openerp.insert_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert <cite>arguments</cite> in <code class="docutils literal"><span class="pre">sys.argv</span></code> (direct impact on child script).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="anybox.recipe.odoo.runtime.start_openerp.main">
+<code class="descclassname">anybox.recipe.odoo.runtime.start_openerp.</code><code class="descname">main</code><span class="sig-paren">(</span><em>starter</em>, <em>conf</em>, <em>version=None</em>, <em>just_test=False</em>, <em>server_wide_modules=None</em>, <em>gevent_script_path=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/start_openerp.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.start_openerp.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call the <cite>starter</cite> script, dispatching configuration.</p>
+<p>All arguments are set in the standalone script produced by buildout through
+entry point options.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>starter</strong> &#8211; path to the main script source file (currently
+<code class="docutils literal"><span class="pre">openerp-server</span></code>)</li>
+<li><strong>conf</strong> &#8211; path to the Odoo configuration file (managed by the recipe)</li>
+<li><strong>version</strong> (<em>tuple of integers</em>) &#8211; Odoo major version</li>
+<li><strong>server_wide_modules</strong> &#8211; additional server wide modules, to pass with
+the <code class="docutils literal"><span class="pre">--load</span></code> command-line option (ignored if the option is actually
+there on the command line)</li>
+<li><strong>just_test</strong> &#8211; if True, only run unit tests</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-anybox.recipe.odoo.runtime.test_openerp">
+<span id="test-openerp-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">test_openerp</span></code> Module<a class="headerlink" href="#module-anybox.recipe.odoo.runtime.test_openerp" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="anybox.recipe.odoo.runtime.test_openerp.insert_args">
+<code class="descclassname">anybox.recipe.odoo.runtime.test_openerp.</code><code class="descname">insert_args</code><span class="sig-paren">(</span><em>arguments</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/test_openerp.html#insert_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.test_openerp.insert_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="anybox.recipe.odoo.runtime.test_openerp.main">
+<code class="descclassname">anybox.recipe.odoo.runtime.test_openerp.</code><code class="descname">main</code><span class="sig-paren">(</span><em>starter</em>, <em>conf</em>, <em>version=()</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/anybox/recipe/odoo/runtime/test_openerp.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#anybox.recipe.odoo.runtime.test_openerp.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2011-2015, &lt;a href=&#34;http://anybox.fr/&#34;&gt;Anybox SAS&lt;/a&gt; and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
